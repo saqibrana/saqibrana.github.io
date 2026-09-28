@@ -84,6 +84,16 @@
   }
   .skip-link:focus{ top:1rem; }
 
+  .sr-only{
+    position:absolute;
+    width:1px; height:1px;
+    padding:0; margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+
   .wrap{
     max-width:var(--maxw);
     margin:0 auto;
@@ -392,8 +402,8 @@
   }
   .stat-grid{
     display:grid;
-    grid-template-columns:repeat(6, 1fr);
-    gap:1.5rem;
+    grid-template-columns:repeat(4, 1fr);
+    gap:2rem 1.5rem;
   }
   @media (max-width:900px){ .stat-grid{ grid-template-columns:repeat(3, 1fr); } }
   @media (max-width:520px){ .stat-grid{ grid-template-columns:repeat(2, 1fr); } }
@@ -457,6 +467,78 @@
     color:var(--muted);
     font-size:0.96rem;
     max-width:70ch;
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .project-cards{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.5rem;
+    margin-bottom:2.5rem;
+  }
+  @media (max-width:900px){ .project-cards{ grid-template-columns:1fr; } }
+  .project-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .project-card .shot{
+    height:180px;
+    overflow:hidden;
+    background:var(--surface-2);
+  }
+  .project-card .shot img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top;
+    display:block;
+  }
+  .project-card-body{
+    padding:1.25rem 1.4rem 1.5rem;
+    display:flex;
+    flex-direction:column;
+    gap:0.6rem;
+    flex:1;
+  }
+  .project-card h4{ font-size:1.05rem; margin:0; }
+  .project-stars{ color:var(--amber-text); font-size:0.85rem; letter-spacing:0.1em; }
+  .project-card blockquote{
+    margin:0;
+    color:var(--muted);
+    font-size:0.92rem;
+    font-style:italic;
+    flex:1;
+  }
+  .quote-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1.25rem;
+  }
+  @media (max-width:700px){ .quote-grid{ grid-template-columns:1fr; } }
+  .quote-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:1.4rem 1.5rem;
+  }
+  .quote-card .project-stars{ margin-bottom:0.6rem; display:block; }
+  .quote-card blockquote{
+    margin:0 0 0.75rem;
+    color:var(--text);
+    font-size:0.96rem;
+    font-style:italic;
+  }
+  .quote-card cite{
+    font-family:var(--font-mono);
+    font-size:0.75rem;
+    color:var(--muted-2);
+    font-style:normal;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
   }
 
   /* ---------- CASE STUDY ---------- */
@@ -640,8 +722,7 @@
         <h1>Front-end work that clears the audit, <em>not just the eye test.</em></h1>
         <p class="lede">14+ years building responsive, cross-browser interfaces — the last 12+ as long-term Senior Frontend Developer for a collegiate sports CMS platform, converting Figma designs into accessible Bootstrap/VTL themes used by 100+ colleges and athletic conferences.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener"><i class="fa-brands fa-upwork" aria-hidden="true"></i> View Upwork profile</a>
-          <a class="btn btn-ghost" href="#contact"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Get in touch</a>
+          <a class="btn btn-primary" href="#work"><i class="fa-regular fa-folder-open" aria-hidden="true"></i> See my work</a>
         </div>
         <div class="hero-meta">
           <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <strong>Islamabad, Pakistan</strong></span>
@@ -692,7 +773,11 @@
 
   <!-- STAT STRIP -->
   <section class="stat-strip" aria-label="Track record">
+    <div class="wrap">
+      <p class="eyebrow"><i class="fa-brands fa-upwork" aria-hidden="true"></i> Live stats from my Upwork profile</p>
+    </div>
     <div class="wrap stat-grid">
+      <div class="stat"><div class="num">$500K+</div><div class="label">Total earnings</div></div>
       <div class="stat"><div class="num">14+</div><div class="label">Years experience</div></div>
       <div class="stat"><div class="num">100%</div><div class="label">Job success score</div></div>
       <div class="stat"><div class="num">5.0</div><div class="label">Rating · 35 reviews</div></div>
@@ -765,6 +850,75 @@
           </summary>
           <div class="skill-body">JIRA for sprint boards and backlog grooming, Bitbucket/Git for pull requests and code review, Confluence for living documentation. Comfortable working daily with distributed, US-based teams.</div>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Client feedback</p>
+        <h2>What clients say.</h2>
+        <p>Real reviews from real Upwork contracts — not curated marketing copy.</p>
+      </div>
+
+      <div class="project-cards">
+        <div class="project-card">
+          <div class="shot">
+            <img src="assets/work/kpe-hero.jpg" alt="Kimpersson Electric homepage, showing a commercial building hero image and services" loading="lazy" width="819" height="660">
+          </div>
+          <div class="project-card-body">
+            <h4>Kimpersson Electric</h4>
+            <span class="project-stars" aria-hidden="true">★★★★★</span><span class="sr-only">5.0 out of 5 stars</span>
+            <blockquote>&ldquo;Saqib has yet again provided exceptional work well before the deadline! He is a highly reliable developer that maintains a great line of communication. Excited to continue working with him in the future!&rdquo;</blockquote>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="shot">
+            <img src="assets/work/pcs-dashboard.jpg" alt="Project Controls Solutions admin dashboard showing a user list table" loading="lazy" width="1400" height="996">
+          </div>
+          <div class="project-card-body">
+            <h4>Project Controls Solutions</h4>
+            <span class="project-stars" aria-hidden="true">★★★★★</span><span class="sr-only">5.0 out of 5 stars</span>
+            <blockquote>&ldquo;Saqib is a true professional who delivers top notch work!&rdquo;</blockquote>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="shot">
+            <img src="assets/work/opreto-full.jpg" alt="OPRETO marketing homepage hero section reading 'We transform your ideas into innovative software solutions', with a client logo row beneath it" loading="lazy" width="410" height="345">
+          </div>
+          <div class="project-card-body">
+            <h4>OPRETO</h4>
+            <span class="project-stars" aria-hidden="true">★★★★★</span><span class="sr-only">5.0 out of 5 stars</span>
+            <blockquote>Figma-to-HTML/CSS build with a focus on accessibility and SEO best practices.</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-grid">
+        <div class="quote-card">
+          <span class="project-stars" aria-hidden="true">★★★★★</span><span class="sr-only">5.0 out of 5 stars</span>
+          <blockquote>&ldquo;Saqib is a very talented and detail-oriented developer. He has always completed his task in a timely manner and communicated very well with other team members.&rdquo;</blockquote>
+          <cite>Web Engineer</cite>
+        </div>
+        <div class="quote-card">
+          <span class="project-stars" aria-hidden="true">★★★★★</span><span class="sr-only">4.9 out of 5 stars</span>
+          <blockquote>&ldquo;I just finished the second contract with Saqib and he continues to deliver on time, on budget and work of the highest quality. I'll work with him again and very much recommend him.&rdquo;</blockquote>
+          <cite>Front End / WordPress Developer</cite>
+        </div>
+        <div class="quote-card">
+          <span class="project-stars" aria-hidden="true">★★★★★</span><span class="sr-only">5.0 out of 5 stars</span>
+          <blockquote>&ldquo;Saqib has shown to be dependable and that he can provide high quality work. Communication was exceptional as well as his work ethic. Will definitely be eager to work with him in the future.&rdquo;</blockquote>
+          <cite>Frontend Developer / Designer, HTML Styling</cite>
+        </div>
+        <div class="quote-card">
+          <span class="project-stars" aria-hidden="true">★★★★★</span><span class="sr-only">5.0 out of 5 stars</span>
+          <blockquote>&ldquo;This is my second job with Saqib and I'm about to hire him again. Great job for my site highly recommended. Very professional. Knows what he's doing and communicates excellent. Thanks again!&rdquo;</blockquote>
+          <cite>WordPress Aged Care Web Integration</cite>
+        </div>
       </div>
     </div>
   </section>
