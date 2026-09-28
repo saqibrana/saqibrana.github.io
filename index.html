@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saqib Rana — Senior Front-End Developer · WCAG/ADA Accessibility Specialist</title>
 <meta name="description" content="Saqib Rana, Senior Front-End Developer specializing in WCAG/ADA accessible, responsive front-end engineering. 14+ years, Top Rated Plus on Upwork.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -242,6 +247,8 @@
     color:var(--muted-2);
   }
   .hero-meta strong{ color:var(--text); font-weight:600; }
+  .hero-meta span{ display:inline-flex; align-items:center; gap:0.4rem; }
+  .hero-meta i{ color:var(--amber); font-size:0.78rem; }
 
   /* ---------- CONTRAST CHECKER (signature widget) ---------- */
   .checker{
@@ -309,6 +316,9 @@
     color:var(--muted);
     border-radius:8px;
     width:2.3rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     flex-shrink:0;
     cursor:pointer;
     font-size:1rem;
@@ -582,8 +592,9 @@
   }
   .contact-links a.primary:hover{ background:var(--amber-strong); color:var(--amber-ink); }
 
-  footer{
-    padding:2.5rem 0 3rem;
+  footer.wrap{
+    padding-top:3.5rem;
+    padding-bottom:4rem;
     border-top:1px solid var(--border);
     color:var(--muted-2);
     font-size:0.85rem;
@@ -592,6 +603,7 @@
     flex-wrap:wrap;
     gap:0.75rem;
   }
+  footer i{ margin-right:0.35em; }
   footer a{ text-decoration:underline; text-underline-offset:3px; }
 </style>
 </head>
@@ -612,7 +624,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener">Hire on Upwork</a>
+      <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Hire on Upwork</a>
     </div>
   </div>
 </header>
@@ -628,13 +640,13 @@
         <h1>Front-end work that clears the audit, <em>not just the eye test.</em></h1>
         <p class="lede">14+ years building responsive, cross-browser interfaces — the last 12+ as long-term Senior Frontend Developer for a collegiate sports CMS platform, converting Figma designs into accessible Bootstrap/VTL themes used by 100+ colleges and athletic conferences.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener">View Upwork profile</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          <a class="btn btn-primary" href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> View Upwork profile</a>
+          <a class="btn btn-ghost" href="#contact"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Get in touch</a>
         </div>
         <div class="hero-meta">
-          <span><strong>Islamabad, Pakistan</strong></span>
-          <span><strong>Available</strong> for new contracts</span>
-          <span>Since <strong>Feb 2012</strong> — current long-term client</span>
+          <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <strong>Islamabad, Pakistan</strong></span>
+          <span><i class="fa-regular fa-circle-check" aria-hidden="true"></i> <strong>Available</strong> for new contracts</span>
+          <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Since <strong>Feb 2012</strong> — current long-term client</span>
         </div>
       </div>
 
@@ -650,7 +662,7 @@
             <input type="color" id="fg-color" value="#EAF1F5" aria-describedby="fg-hex">
             <code id="fg-hex">#EAF1F5</code>
           </div>
-          <button class="swap-btn" id="swap-colors" type="button" aria-label="Swap text and background colors">⇄</button>
+          <button class="swap-btn" id="swap-colors" type="button" aria-label="Swap text and background colors"><i class="fa-solid fa-right-left" aria-hidden="true"></i></button>
           <div class="picker">
             <label for="bg-color">BG</label>
             <input type="color" id="bg-color" value="#0E1720" aria-describedby="bg-hex">
@@ -704,7 +716,7 @@
           <summary>
             <span class="skill-tag">FE</span>
             <span class="skill-name">Front-End Development</span>
-            <span class="chevron" aria-hidden="true">⌄</span>
+            <span class="chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
           </summary>
           <div class="skill-body">HTML5, CSS3, JavaScript, jQuery, Bootstrap 5, and Velocity Template Language (VTL). Responsive, mobile-first builds with consistent cross-browser behavior.</div>
         </details>
@@ -713,7 +725,7 @@
           <summary>
             <span class="skill-tag">D2C</span>
             <span class="skill-name">Design-to-Code</span>
-            <span class="chevron" aria-hidden="true">⌄</span>
+            <span class="chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
           </summary>
           <div class="skill-body">Converting Figma designs into production Bootstrap themes — templates, styles, layout, and scripts — that match the comp pixel-for-pixel without sacrificing semantics.</div>
         </details>
@@ -722,7 +734,7 @@
           <summary>
             <span class="skill-tag">A11Y</span>
             <span class="skill-name">Accessibility</span>
-            <span class="chevron" aria-hidden="true">⌄</span>
+            <span class="chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
           </summary>
           <div class="skill-body">WCAG 2.1/2.2, ADA and Section 508 compliance, VPAT support. Auditing with WAVE, Axe DevTools, and PowerMapper. ARIA authoring, keyboard-navigation remediation, and screen reader testing.</div>
         </details>
@@ -731,7 +743,7 @@
           <summary>
             <span class="skill-tag">CMP</span>
             <span class="skill-name">Component Development</span>
-            <span class="chevron" aria-hidden="true">⌄</span>
+            <span class="chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
           </summary>
           <div class="skill-body">Reusable Bootstrap/VTL components built to a shared theme-component contract: carousels, Slick sliders, tabs, accordions, navbars, and roster/stats/schedule modules.</div>
         </details>
@@ -740,7 +752,7 @@
           <summary>
             <span class="skill-tag">AI</span>
             <span class="skill-name">AI-Assisted Engineering</span>
-            <span class="chevron" aria-hidden="true">⌄</span>
+            <span class="chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
           </summary>
           <div class="skill-body">Built Claude Code skills that generate theme wireframes, sections, components, and landing page layouts directly from Figma designs, plus an automated ADA-auditing skill.</div>
         </details>
@@ -749,7 +761,7 @@
           <summary>
             <span class="skill-tag">OPS</span>
             <span class="skill-name">Tools &amp; Workflow</span>
-            <span class="chevron" aria-hidden="true">⌄</span>
+            <span class="chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
           </summary>
           <div class="skill-body">JIRA for sprint boards and backlog grooming, Bitbucket/Git for pull requests and code review, Confluence for living documentation. Comfortable working daily with distributed, US-based teams.</div>
         </details>
@@ -902,9 +914,9 @@
           <p>Available for long-term contracts and focused engagements — accessibility audits, theme builds, or ongoing front-end support.</p>
         </div>
         <div class="contact-links">
-          <a class="primary" href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener">Hire me on Upwork ↗</a>
-          <a href="mailto:saqibrana.dev@gmail.com">saqibrana.dev@gmail.com</a>
-          <a href="tel:+923455141911">+92 345 5141911</a>
+          <a class="primary" href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Hire me on Upwork <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.8em;"></i></a>
+          <a href="mailto:saqibrana.dev@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> saqibrana.dev@gmail.com</a>
+          <a href="tel:+923455141911"><i class="fa-solid fa-phone" aria-hidden="true"></i> +92 345 5141911</a>
         </div>
       </div>
     </div>
@@ -914,7 +926,7 @@
 
 <footer class="wrap">
   <span>© 2026 Saqib Rana. Islamabad, Pakistan.</span>
-  <span><a href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener">Upwork profile</a> · <a href="mailto:saqibrana.dev@gmail.com">Email</a></span>
+  <span><a href="https://www.upwork.com/freelancers/~0135e096aaa8a8fedc" target="_blank" rel="noopener"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Upwork profile</a> · <a href="mailto:saqibrana.dev@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Email</a></span>
 </footer>
 
 <script>
