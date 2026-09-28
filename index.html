@@ -12,28 +12,28 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0E1720;
-    --surface:#152230;
-    --surface-2:#1C2C3B;
-    --border:rgba(234,241,245,0.10);
-    --border-strong:rgba(234,241,245,0.18);
-    --text:#EAF1F5;
-    --muted:#9FB2C0;
-    --muted-2:#7690A0;
-    --amber:#E8A63B;
-    --amber-strong:#F2C572;
-    --amber-ink:#22160A;
-    --fail:#E2707A;
-    --fail-bg:#3A1E22;
-    --pass-bg:#20301F;
-    --pass:#8FD19E;
+    --bg:#F7F2EB;
+    --surface:#EAE2D6;
+    --surface-2:#EEEEEE;
+    --border:rgba(39,43,31,0.12);
+    --border-strong:rgba(39,43,31,0.22);
+    --text:rgba(39,43,31,0.92);
+    --muted:rgba(39,43,31,0.65);
+    --muted-2:rgba(39,43,31,0.46);
+    --amber:#8B9A6E;
+    --amber-strong:#9CA984;
+    --amber-ink:#1E2117;
+    --fail:#8A2C35;
+    --fail-bg:#FBE1E4;
+    --pass-bg:#DCEEDC;
+    --pass:#1E5E33;
     --radius:14px;
     --maxw:1120px;
-    --font-display:'Big Shoulders Display', sans-serif;
-    --font-body:'Inter', system-ui, sans-serif;
+    --font-display:'Oswald', sans-serif;
+    --font-body:'Roboto', system-ui, sans-serif;
     --font-mono:'JetBrains Mono', monospace;
   }
 
@@ -65,7 +65,7 @@
   [tabindex]:focus-visible{
     outline:3px solid var(--amber-strong);
     outline-offset:3px;
-    box-shadow:0 0 0 6px rgba(14,23,32,0.9);
+    box-shadow:0 0 0 6px rgba(247,242,235,0.9);
     border-radius:4px;
   }
 
@@ -129,7 +129,7 @@
     position:sticky;
     top:0;
     z-index:100;
-    background:rgba(14,23,32,0.85);
+    background:rgba(247,242,235,0.85);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
   }
@@ -659,14 +659,14 @@
         <div class="picker-row">
           <div class="picker">
             <label for="fg-color">Text</label>
-            <input type="color" id="fg-color" value="#EAF1F5" aria-describedby="fg-hex">
-            <code id="fg-hex">#EAF1F5</code>
+            <input type="color" id="fg-color" value="#272B1F" aria-describedby="fg-hex">
+            <code id="fg-hex">#272B1F</code>
           </div>
           <button class="swap-btn" id="swap-colors" type="button" aria-label="Swap text and background colors"><i class="fa-solid fa-right-left" aria-hidden="true"></i></button>
           <div class="picker">
             <label for="bg-color">BG</label>
-            <input type="color" id="bg-color" value="#0E1720" aria-describedby="bg-hex">
-            <code id="bg-hex">#0E1720</code>
+            <input type="color" id="bg-color" value="#F7F2EB" aria-describedby="bg-hex">
+            <code id="bg-hex">#F7F2EB</code>
           </div>
         </div>
 
@@ -676,7 +676,7 @@
         </div>
 
         <div class="ratio-row">
-          <span class="ratio-value" id="ratio-value">15.1:1</span>
+          <span class="ratio-value" id="ratio-value">13.0:1</span>
           <span class="ratio-label">contrast ratio</span>
         </div>
 
