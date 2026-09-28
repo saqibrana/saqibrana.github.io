@@ -202,6 +202,15 @@
   @media (max-width:900px){
     .hero-grid{ grid-template-columns:1fr; }
   }
+  .hero-avatar{
+    width:5.5rem;
+    height:5.5rem;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--amber);
+    padding:3px;
+    margin-bottom:1.25rem;
+  }
   .hero h1{
     font-size:clamp(2.4rem, 5.4vw, 4rem);
     text-transform:uppercase;
@@ -614,6 +623,7 @@
   <section class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
+        <img class="hero-avatar" src="assets/saqib.jpg" alt="Portrait of Saqib Rana" width="88" height="88">
         <p class="eyebrow">Senior Front-End Developer · WCAG/ADA Specialist</p>
         <h1>Front-end work that clears the audit, <em>not just the eye test.</em></h1>
         <p class="lede">14+ years building responsive, cross-browser interfaces — the last 12+ as long-term Senior Frontend Developer for a collegiate sports CMS platform, converting Figma designs into accessible Bootstrap/VTL themes used by 100+ colleges and athletic conferences.</p>
